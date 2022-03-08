@@ -1,0 +1,17 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: baidu
+          uri: https://www.baidu.com/
+          # 断言
+          predicates:
+            - Method=GET,POST
+
+
+
