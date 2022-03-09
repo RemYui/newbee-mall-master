@@ -30,6 +30,7 @@
         <module>newbee-mall-gateway</module>
         <module>newbee-mall-user</module>
         <module>newbee-mall-product</module>
+        <module>newbee-mall-order</module>
     </modules>
 
     <dependencies>
