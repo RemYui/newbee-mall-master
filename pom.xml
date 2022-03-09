@@ -29,6 +29,7 @@
         <module>newbee-mall-commons</module>
         <module>newbee-mall-gateway</module>
         <module>newbee-mall-user</module>
+        <module>newbee-mall-product</module>
     </modules>
 
     <dependencies>

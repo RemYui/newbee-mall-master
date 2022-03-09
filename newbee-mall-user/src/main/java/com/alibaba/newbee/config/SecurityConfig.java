@@ -20,7 +20,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        super.configure(http);
+        http.
+                //放开以下请求
+                antMatcher("**/index").antMatcher("**/login").antMatcher("**/register").anonymous()
+                .and()
+                //其他请求需要认证
+                .antMatcher("/**")
+                .authorizeRequests(auth -> auth.anyRequest().authenticated())
+                .build();
     }
 
     /**
